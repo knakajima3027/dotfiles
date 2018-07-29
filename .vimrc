@@ -1,3 +1,4 @@
+
 " setting
 "文字コードをUFT-8に設定
 set fenc=utf-8
@@ -61,3 +62,17 @@ set wrapscan
 set hlsearch
 " ESC連打でハイライト解除
 nmap <Esc><Esc> :nohlsearch<CR><Esc>
+
+""""""""""""""""""""""""""""""
+" プラグインのセットアップ
+""""""""""""""""""""""""""""""
+call plug#begin('~/.vim/plugged')
+
+" ファイルオープンを便利に
+Plug 'Shougo/unite.vim'
+" Unite.vimで最近使ったファイルを表示できるようにする
+Plug 'Shougo/neomru.vim'
+" ...省略
+
+call plug#end()
+""""""""""""""""""""""""""""""
