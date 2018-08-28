@@ -1,5 +1,7 @@
 
-" setting
+" setting"
+"構文毎に色分け 
+syntax on  
 "文字コードをUFT-8に設定
 set fenc=utf-8
 " バックアップファイルを作らない
@@ -91,6 +93,6 @@ Plug 'scrooloose/nerdtree'
 Plug 'Shougo/neosnippet.vim'
 
 "カラースキーマ自動調整"
-Plig 'tomasr/molokai'
+Plug 'tomasr/molokai'
 call plug#end()
 """"""""""""""""""""""""""""""
