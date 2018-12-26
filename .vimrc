@@ -66,6 +66,11 @@ set hlsearch
 " ESC連打でハイライト解除
 nmap <Esc><Esc> :nohlsearch<CR><Esc>
 
+
+"ショートカット系"
+"Ctrl+eでNERDTreeを開く
+nnoremap <silent><C-e> :NERDTreeToggle<CR>
+
 """"""""""""""""""""""""""""""
 " プラグインのセットアップ
 """"""""""""""""""""""""""""""
