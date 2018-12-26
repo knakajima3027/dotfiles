@@ -1,7 +1,9 @@
 ### 初期設定  
-`$ cd ~  
+```shell
+$ cd ~  
 $ git clone https://github.com/knakajima3027/dotfiles.git  
 $ cd dotfiles  
-$ sh intall.sh    
-$ curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim`  
+$ sh intall.sh  
+$ curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+```  
 `:PlugInstall`   
