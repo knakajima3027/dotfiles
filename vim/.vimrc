@@ -5,9 +5,6 @@ syntax on
 "文字コードをUFT-8に設定
 set fenc=utf-8
 
-" バックアップファイルを作らない
-set nobackup
-
 " スワップファイルを作らない
 set noswapfile
 
@@ -28,6 +25,12 @@ set smartindent
 
 " 括弧入力時の対応する括弧を表示
 set showmatch
+
+"対応するカッコを自動補間
+inoremap { {}<Left>
+inoremap {<Enter> {}<Left><CR><ESC><S-o>
+inoremap ( ()<ESC>i
+inoremap (<Enter> ()<Left><CR><ESC><S-o>
 
 " コマンドラインの補完
 set wildmode=list:longest
@@ -90,5 +93,8 @@ Plug 'Shougo/neosnippet.vim'
 
 "カラースキーマ自動調整"
 Plug 'tomasr/molokai'
+
+"Pythonファイル起動時のみ, jedi-vim起動"
+Plug 'davidhalter/jedi-vim', {'for': 'python'} 
 call plug#end()
 """"""""""""""""""""""""""""""
