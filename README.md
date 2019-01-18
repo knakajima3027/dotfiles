@@ -12,5 +12,5 @@ $ curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent
 ## vscode  
 ### 初期設定  
 ```shell
-$ ln -fnsv dotfiles/vscode $HOME/Library/Application Support/Code/User  
+$ ln -fnsv dotfiles/vscode $HOME/Library/Application\ Support/Code/User  
 ```
