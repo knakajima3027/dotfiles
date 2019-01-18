@@ -1,0 +1,15 @@
+"files.insertFinalNewline": true
+
+"editor.renderControlCharacters": true
+
+"editor.wordWrap": "on"
+
+"workbench.editor.closeEmptyGroups": false
+
+"terminal.integrated.copyOnSelection": true
+
+"workbench.startupEditor": "newUntitledFile"
+
+"files.trimFinalNewlines": true
+
+
