@@ -1,4 +1,4 @@
-setting"
+"setting"
 "構文毎に色分け
 syntax on
 
