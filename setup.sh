@@ -1,5 +1,7 @@
 #!/bin/sh
-ln -sf ~/dotfiles/.vimrc ~/.vimrc
+mkdir ~/.vim/colors
+ln -sf ~/dotfiles/vim/.vimrc ~/.vimrc
+ln -sf ~/dotfiles/vim/molokai/colors/molokai.vim ~/.vim/colors/molokai.vim
 ln -sf ~/dotfiles/.zshrc ~/.zshrc
 ln -sf ~/dotfiles/.zprofile ~/.zprofile
 ln -sf ~/dotfiles/.bash_profile ~/.bash_profile
