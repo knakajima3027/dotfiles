@@ -1,11 +1,9 @@
-"構文毎に色分け
+"カラースキーマの設定
 syntax enable
 colorscheme tender
 
-"ファイル拡張子の検出
-filetype plugin indent on
 
-"エディタの設定
+"エディタの基本設定
 "行番号を表示
 set number
 
@@ -31,6 +29,7 @@ set expandtab
 
 " 行頭以外のTab文字の表示幅
 set tabstop=2
+
 
 "検索関連
 "検索文字列が小文字の時、大文字も含めて検索
