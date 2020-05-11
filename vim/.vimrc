@@ -1,6 +1,6 @@
 "構文毎に色分け
 syntax enable
-colorscheme molokai
+colorscheme tender
 
 "ファイル拡張子の検出
 filetype plugin indent on
