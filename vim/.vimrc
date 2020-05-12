@@ -19,6 +19,8 @@ set showmatch
 " コマンドラインの補完
 set wildmode=list:longest
 
+"別のファイルにコピペ可能に
+set clipboard=unnamed
 
 " Tab系
 " 不可視文字を可視化(タブが「▸-」と表示される)
