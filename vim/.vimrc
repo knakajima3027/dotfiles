@@ -30,7 +30,8 @@ set expandtab
 " 行頭以外のTab文字の表示幅
 set tabstop=2
 
-
+"Tab文字を消すときもスペース2つ分ずつ消す
+set shiftwidth=2
 "検索関連
 "検索文字列が小文字の時、大文字も含めて検索
 set ignorecase
