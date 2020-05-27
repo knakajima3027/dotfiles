@@ -16,6 +16,13 @@ zle -N history-beginning-search-forward-end history-search-end
 bindkey "^P" history-beginning-search-backward-end
 bindkey "^N" history-beginning-search-forward-end
 
-# alias
+# alias (基本)
 alias ls='ls -G'
-alias diff="coloddiff"
+alias la='ls -a'
+
+# alias (git)
+alias g='git'
+alias gs='git status'
+alias ga='git add'
+alias gc='git commit'
+alias gp='git push'
