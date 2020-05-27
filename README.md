@@ -1,7 +1,8 @@
-### 初期設定  
+## SET UP  
 ```shell
 $ cd ~  
-$ git clone https://github.com/knakajima3027/dotfiles.git  
+$ git clone --recursive git://github.com/knakajima3027/dotfiles  
 $ cd dotfiles  
-$ sh ./setup.sh  
+$ sh setup.sh  
 ```  
+
