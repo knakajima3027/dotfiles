@@ -2,11 +2,15 @@
 export ZPLUG_HOME=/usr/local/opt/zplug
 source $ZPLUG_HOME/init.zsh
 
-# syntax
+# zplugプラグイン
 zplug "chrissicool/zsh-256color"
 zplug "Tarrasch/zsh-colors"
 zplug "zsh-users/zsh-syntax-highlighting"
 zplug "ascii-soup/zsh-url-highlighter"
+zplug "zsh-users/zsh-autosuggestions"
+
+ZSH_THEME="powerlevel9k/powerlevel9k"
+POWERLEVEL9K_MODE="nerdfont-complete"
 
 # 未インストール項目をインストールする
 if ! zplug check --verbose; then
