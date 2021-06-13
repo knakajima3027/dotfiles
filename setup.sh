@@ -11,6 +11,9 @@ ln -sf ~/dotfiles/vim/tender.vim/colors/tender.vim ~/.vim/colors/tender.vim
 # install bash-completion
 brew install bash-completion
 
+# install bat
+brew install bat
+
 # install vim-plug
 curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
