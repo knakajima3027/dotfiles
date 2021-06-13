@@ -1,14 +1,14 @@
 {
-   "editor.fontSize": 14,  //フォントサイズ
+   "editor.fontSize": 14,  
 
-  "files.insertFinalNewline": true,  //最終行に改行を自動挿入
+  "files.insertFinalNewline": true,  
 
-  "editor.wordWrap": "on",  // 折り返しの表示
+  "editor.wordWrap": "on",  
 
   "workbench.editor.closeEmptyGroups": false,
 
   "terminal.integrated.copyOnSelection": true,
 
-  "files.trimFinalNewlines": true,  // 不要な行の削除
+  "files.trimFinalNewlines": true
 
 }
