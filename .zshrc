@@ -40,8 +40,9 @@ alias g='git'
 alias gs='git status'
 alias ga='git add'
 alias gc='git commit'
-alias gp='git push'
-alias gpl='git pull'
+alias gb = 'git branch'
+alias gco = 'git checkout'
+alias gcb = 'git checkout -b'
 
 
 ############### その他 ###############
@@ -52,6 +53,9 @@ eval "$(pyenv init -)"
 
 # npm
 export PATH=$HOME/.nodebrew/current/bin:$PATH
+
+############### zplug ###############
+source ~/.zplug/init.zsh
 
 
 ############### zinit ###############

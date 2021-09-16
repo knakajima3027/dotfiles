@@ -4,11 +4,13 @@ alias ls='ls -G'
 alias la='ls -a'
 
 # alias (git)
-alias g='git'
 alias gs='git status'
 alias ga='git add'
 alias gc='git commit'
-alias gp='git push'
+alias gd = 'git diff'
+alias gb = 'git branch'
+alias gco = 'git checkout'
+alias gcb = 'git checkout -b'
 
 ############### git branchの表示 ###############
 source /usr/local/etc/bash_completion.d/git-prompt.sh
