@@ -1,19 +1,99 @@
 #!/bin/sh
-# alias
-ln -sf ~/dotfiles/.bashrc ~/.bashrc
-ln -sf ~/dotfiles/.zshrc ~/.zshrc
-ln -sf ~/dotfiles/.inputrc ~/.inputrc
+
+has() {
+  type "$1" > /dev/null 2>&1
+}
+
+# --- brew ---
+# brewのインストール
+if has "brew"; then
+  echo "Already installed Homebrew"
+else
+  echo "Installing Homebrew..."
+  ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+fi
+
+# 各種パッケージのインストール
+if has "brew"; then
+  echo "Updating Homebrew..."
+  brew update && brew upgrade
+
+  local list_formulae
+  local -a missing_formulae=()
+  local -a desired_formulae=(
+    "bash-completion"
+    "git"
+    "mysql"
+    "zsh"
+    "tmux"
+    "bat"
+    "exa"
+  )
+
+  local installed_formulae=`brew list`
+
+  # desired_formulaeで指定していて、インストールされていないパッケージをインストール
+  for index in ${!desired_formulae[*]}
+  do
+    local formulae=`echo ${desired_formulae[$index]} | cut -d' ' -f 1`
+    if [[ -z `echo "${installed_formulae}" | grep "^${formulae}$"` ]]; then
+      missing_formulae=("${missing_formulae[@]}" "${desired_formulae[$index]}")
+    else
+      echo "Installed ${formulae}"
+    fi
+  done
+
+  if [[ "$missing_formulae" ]]; then
+    list_formulae=$( printf "%s " "${missing_formulae[@]}" )
+
+    echo "Installing missing brew formulae..."
+    brew install $list_formulae
+  fi
+
+  # cask
+  local -a missing_cask_formulae=()
+  local -a desired_cask_formulae=(
+    "alfred"
+    "google-chrome"
+    "visual-studio-code"
+  )
+
+  local cask_installed=`brew list --cask`
+
+  # desired_cask_formulaeで指定していて、インストールされていないパッケージをインストール
+  for index in ${!desired_cask_formulae[*]}
+  do
+    local cask_formulae=`echo ${desired_cask_formulae[$index]} | cut -d' ' -f 1`
+    if [[ -z `echo "${installed_cask_formulae}" | grep "^${cask_formulae}$"` ]]; then
+      missing_cask_formulae=("${missing_cask_formulae[@]}" "${desired_cask_formulae[$index]}")
+    else
+      echo "Installed ${cask_formulae}"
+    fi
+  done
+
+  if [[ "$missing_cask_formulae" ]]; then
+    cask_list_formulae=$( printf "%s " "${missing_cask_formulae[@]}" )
+
+    echo "Installing missing brew formulae..."
+    brew install $cask_list_formulae
+  fi
+
+  echo "Cleanup Homebrew..."
+  brew cleanup
+fi
+
+
+# --- Shell ---
+# シェルはzshを利用する
+[ ${SHELL} != "/bin/zsh"  ] && chsh -s /bin/zsh
+
+# --- submodule ---
+# 初期化　& 更新
+git submodule init  && git submodule update
+
+# --- mkdir ---
 mkdir ~/.vim/colors
-ln -sf ~/dotfiles/vim/.vimrc ~/.vimrc
-ln -sf ~/dotfiles/vim/molokai/colors/molokai.vim ~/.vim/colors/molokai.vim
-ln -sf ~/dotfiles/vim/tender.vim/colors/tender.vim ~/.vim/colors/tender.vim
 
-# install bash-completion
-brew install bash-completion
-
-# install bat
-brew install bat
-
-# install vim-plug
+# --- vim-plug ---
 curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
