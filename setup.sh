@@ -23,11 +23,13 @@ if has "brew"; then
   local -a desired_formulae=(
     "bash-completion"
     "git"
-    "mysql"
     "zsh"
     "tmux"
     "bat"
     "exa"
+    "fzf"
+    "git-delta"
+    "ripgrep"
   )
 
   local installed_formulae=`brew list`
@@ -54,6 +56,7 @@ if has "brew"; then
   local -a missing_cask_formulae=()
   local -a desired_cask_formulae=(
     "alfred"
+    "iTerm2"
     "google-chrome"
     "visual-studio-code"
   )
@@ -94,6 +97,30 @@ git submodule init  && git submodule update
 # --- mkdir ---
 mkdir ~/.vim/colors
 
+# fzf
+
+
 # --- vim-plug ---
 curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+
+
+# iterm2 テーマ設定
+git clone https://github.com/mbadolato/iTerm2-Color-Schemes ~/iTerm2-Color-Schemes
+
+~/iTerm2-Color-Schemes/tools/import-scheme.sh ~/iTerm2-Color-Schemes/schemes/*
+
+~/iTerm2-Color-Schemes/tools/import-scheme.sh -v ~/iTerm2-Color-Schemes/schemes/*
+
+~/iTerm2-Color-Schemes/tools/import-scheme.sh "Monokai Soda"
+
+# Macの設定
+# 隠しファイルを表示する
+defaults write com.apple.finder AppleShowAllFiles -bool true
+
+# .DS_Storeファイルを作成しない
+defaults write com.apple.desktopservices DSDontWriteNetworkStores -bool true
+defaults write com.apple.desktopservices DSDontWriteUSBStores -bool true
+
+# 設定反映
+killall Finder
