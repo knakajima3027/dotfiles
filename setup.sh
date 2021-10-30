@@ -18,18 +18,22 @@ if has "brew"; then
   echo "Updating Homebrew..."
   brew update && brew upgrade
 
+  brew tap homebrew/cask-fonts
+
   local list_formulae
   local -a missing_formulae=()
   local -a desired_formulae=(
     "bash-completion"
     "git"
     "zsh"
+    "zplug"
     "tmux"
     "bat"
     "exa"
     "fzf"
     "git-delta"
     "ripgrep"
+    "font-hackgen"
   )
 
   local installed_formulae=`brew list`
@@ -99,6 +103,8 @@ mkdir ~/.vim/colors
 
 # fzf
 
+# --- zinit ---
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/zdharma/zinit/master/doc/install.sh)"
 
 # --- vim-plug ---
 curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
