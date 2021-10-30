@@ -104,7 +104,7 @@ mkdir ~/.vim/colors
 # fzf
 
 # --- zinit ---
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/zdharma/zinit/master/doc/install.sh)"
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/zdharma-continuum/zinit/master/doc/install.sh)"
 
 # --- vim-plug ---
 curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
