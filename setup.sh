@@ -68,7 +68,8 @@ if has "brew"; then
     "google-japanese-ime"
     "hyperswitch"
     "iTerm2"
-    "spotifykindle"
+    "spotify"
+    "kindle"
     "visual-studio-code"
   )
 

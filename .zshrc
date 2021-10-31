@@ -45,7 +45,7 @@ bindkey "^N" history-beginning-search-forw  ard-end
 #alias ls='exa -h'
 
 # alias (cat)
-#alias cat='bat'
+alias cat='bat'
 
 # alias (git)
 alias gs='git status'
