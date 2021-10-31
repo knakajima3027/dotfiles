@@ -59,9 +59,16 @@ if has "brew"; then
   # cask
   local -a missing_cask_formulae=()
   local -a desired_cask_formulae=(
+    "1password"
     "alfred"
-    "iTerm2"
+    "clipy"
+    "deepl"
+    "docker"
     "google-chrome"
+    "google-japanese-ime"
+    "hyperswitch"
+    "iTerm2"
+    "spotifykindle"
     "visual-studio-code"
   )
 
