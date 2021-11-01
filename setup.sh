@@ -25,8 +25,6 @@ if has "brew"; then
   local -a desired_formulae=(
     "bash-completion"
     "git"
-    "zsh"
-    "zplug"
     "tmux"
     "bat"
     "exa"
