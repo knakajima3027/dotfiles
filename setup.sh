@@ -67,6 +67,7 @@ if has "brew"; then
     "hyperswitch"
     "iTerm2"
     "spotifykindle"
+    "typora"
     "visual-studio-code"
   )
 
