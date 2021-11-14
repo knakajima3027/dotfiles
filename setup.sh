@@ -27,6 +27,7 @@ if has "brew"; then
     "git"
     "tmux"
     "bat"
+    "jq"
     "exa"
     "fzf"
     "git-delta"
