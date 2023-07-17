@@ -1,8 +1,8 @@
 # This is Git's per-user configuration file.
 [user]
 # Please adapt and uncomment the following lines:
-#	name = myname
-#	email = mymail
+	name = knakajima3027
+	email = kamihate1012@gmail.com
 
 # コミット履歴の表示設定
 [alias]
