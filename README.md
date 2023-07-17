@@ -5,6 +5,7 @@ $ cd ~
 $ git clone --recursive git://github.com/knakajima3027/dotfiles  
 $ cd dotfiles  
 $ sh setup.sh  
+$ sh deploy.sh
 ```  
 
 ## 各種設定ファイル
@@ -14,7 +15,3 @@ $ sh setup.sh
 
 ### deploy.sh
 シンボリックリンクを貼りたいファイルが増えた時、貼りなおしたい時に実行する。
-
-### .gitmodules
-dotfileに入れておきたい他のリポジトリのコードを取得する。vimのカラースキーマなど。
-
