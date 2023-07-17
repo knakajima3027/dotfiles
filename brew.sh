@@ -3,7 +3,6 @@ has() {
   type "$1" > /dev/null 2>&1
 }
 
-# --- brew ---
 # brewのインストール
 if has "brew"; then
   echo "Already installed Homebrew"
