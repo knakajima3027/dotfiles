@@ -103,12 +103,12 @@ fi
 # シェルはzshを利用する
 [ ${SHELL} != "/bin/zsh"  ] && chsh -s /bin/zsh
 
-# --- submodule ---
-# 初期化　& 更新
+# --- git submodule ---
+# 初期化 & 更新
 git submodule init  && git submodule update
 
 # --- mkdir ---
-mkdir ~/.vim/colors
+mkdir -p ~/.vim/colors
 
 # fzf
 

@@ -1,6 +1,6 @@
-[submodule "vim/colors/molokai"]
-	path = vim/colors/molokai
+[submodule "vim/molokai"]
+	path = vim/molokai
 	url = https://github.com/tomasr/molokai
-[submodule "vim/colors/tender.vim"]
-	path = vim/colors/tender.vim
+[submodule "vim/tender.vim"]
+	path = vim/tender.vim
 	url = https://github.com/jacoborus/tender.vim
